@@ -44,14 +44,14 @@ public class DemoQATest {
             WebElement mobile = driver.findElement(By.id("userNumber"));
             mobile.sendKeys("1234567890");
             System.out.println("Mobile entered");
-
+             Thread.sleep(1000);
             // Step 6 - Scroll down and Submit
             WebElement submitBtn = driver.findElement(By.id("submit"));
             js.executeScript("arguments[0].click();", submitBtn);
             System.out.println("Form submitted!");
 
             // Step 7 - Verify success popup
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             WebElement popup = driver.findElement(By.id("example-modal-sizes-title-lg"));
             System.out.println("Success Message: " + popup.getText());
 
